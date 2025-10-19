@@ -3,6 +3,10 @@ import torch.nn as nn
 import torch
 from torch.utils.data import DataLoader, TensorDataset, Dataset
 
+
+
+
+
 # Add Physics-Based Sustainability Model
 class PhysicsInformedSustainabilityModel:
     """
@@ -89,6 +93,10 @@ class PhysicsInformedSustainabilityModel:
         
         return total_energy
 
+
+
+
+
 # Add Nigerian Manufacturing Context 
 class NigerianManufacturingContext:
     """
@@ -165,6 +173,9 @@ class NigerianManufacturingContext:
         return base_wear_rate * total_acceleration
     
 
+
+
+
 # Custom Dataset for Multi-Task Learning
 class MultiTaskDataset(torch.utils.data.Dataset):
     def __init__(self, X, targets_dict, power_states):
@@ -182,6 +193,10 @@ class MultiTaskDataset(torch.utils.data.Dataset):
     
     def __getitem__(self, idx):
         return self.X[idx], {k: v[idx] for k, v in self.targets.items()}, self.power_states[idx]
+
+
+
+
 
 # Multi-Task Bayesian Neural Network with Uncertainty Quantification  
 class SustainabilityAwareBayesianNN(nn.Module):
@@ -286,6 +301,9 @@ class SustainabilityAwareBayesianNN(nn.Module):
             aggregated[f'{key}_std'] = stacked.std(dim=0)
         
         return aggregated
+
+
+
 
 
 # Sustainability-Aware Loss Function
